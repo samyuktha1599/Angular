@@ -1,0 +1,13 @@
+<table *ngFor="let test of getAllTests()">
+
+    <tr>
+        <td><img src="{{test.image}}"></td>
+        <td>{{test.testName}}</td>
+        <td>{{test.testCost|currency:"INR":"symbol"}}</td>
+        <td>{{test.rating}}</td>
+        <td><img src="{{ratingStar(test.rating)}}" width="10"></td>
+        <td>{{test.description|textpipe}}</td>
+        <td><button (click)="addTest()">Take Test</button></td>
+        <td><button (click)="share()">Share</button></td>
+    </tr>
+</table>
